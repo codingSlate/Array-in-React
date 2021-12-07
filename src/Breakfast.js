@@ -12,8 +12,9 @@ export default function list() {
   };
 
   const DisplayList = list.map((item, index) => (
-    <li>
-      <label htmlFor={`item-${index}`}>{item}</label>
+    <li key={index.toString()}>
+      {/* <li key={item}> */}
+      <label htmlFor={`item-${index}`}> {item}</label>
       <input type="text" id={`item-${index}`} />
     </li>
   ));
